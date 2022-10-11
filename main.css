@@ -1,0 +1,61 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins");
+
+body{
+    scroll-behavior: smooth ;
+    scroll-snap-type: y mandatory;
+    
+}
+*{
+    font-family: 'Poppins', 'sans-serif';
+}
+
+.navig{
+    font-weight: bold;
+}
+
+section{
+    display: grid;
+    place-items: center;
+    align-content: center;
+    min-height: 100vh;
+    scroll-snap-align: center;
+}
+
+.face {
+    background: linear-gradient(-45deg, #4ee1e9, #2b98bc, #412fca, #c61fb5);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+
+#navi{
+    top: 1%;
+    vertical-align: middle;
+    position: absolute;
+    left: 50%;
+    transform: translatex(-50%);
+}
+
+.brandname {
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 1000;
+    animation: dash 10s infinite forwards;
+  }
+  
+  @keyframes dash {
+    to {
+      stroke-dashoffset: -1000;
+    }
+  }
